@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import './App.css';
 
 //class App extends Component{}
@@ -11,12 +11,26 @@ import './App.css';
 const App = () => {
 
 
+
+
+
+
+
   // todos의 초기값을 빈 배열로 생성하겠다는 의미
 
   // todos 할 일 목록 들을 저장하는 공간
   // newTodo 새로운 할 일을 추가 작성할 수 있는 공간
   const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState('');
+
+
+  useEffect(() =>{
+    console.log(`todos 변경됨 :`, todos)
+  }, [todos]);
+
+
+
+
 
 
   //할 일이 추가될 때마다 추가할 수 있는 const를 생성 
