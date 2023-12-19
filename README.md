@@ -83,7 +83,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 // map 배열 객체 메서드
 // 배열의 각 요소에서 함수를 호출하고, 그 함수의 반환값으로 새로운 배열을 생성
 
-/*
  예제코드 : 
     const newArray = array.map((value, index, array)=> {});   
  value : 현재 배열안에 있는 배열의 요소 
@@ -110,7 +109,7 @@ array.map((요소, 자릿값, 만약에 새로운 배열이 필요하다면 배�
 })
 
 
- */
+
 
 
  // slice : 배열 일부분 복사해서 새로운 배열 반환
