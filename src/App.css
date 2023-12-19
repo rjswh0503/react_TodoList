@@ -44,10 +44,12 @@
 }
 
 h2 {
+  text-align: center;
   color: #333;
 }
 
 input {
+
   margin-right: 8px;
 }
 
@@ -71,4 +73,9 @@ button {
   border: none;
   padding: 8px;
   cursor: pointer;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
 }
