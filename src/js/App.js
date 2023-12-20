@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react';
-import './App.css';
+import '../App.css';
 
 //class App extends Component{}
 
@@ -84,6 +84,7 @@ const App = () => {
         {todos.map((todo, index) => (
           <li key={index}>
             {todo}
+          
           <button onClick={() => removeTodo(index)}>삭제하기</button>
           </li>
         ))}
