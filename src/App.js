@@ -6,6 +6,7 @@ import Header from './Component/Header';
 import Footer from './Component/Footer';
 import About  from './Component/About';
 import Home from './Component/Home';
+import Board from './Component/Board';
 
 
 
@@ -23,6 +24,9 @@ function  App (){
                         <li>
                             <Link to="/todo">할 일 목록</Link>
                         </li>
+                        <li>
+                            <Link to="/board">게시판</Link>
+                        </li>
                     </ul>
                 </nav>
                 <hr />
@@ -33,6 +37,11 @@ function  App (){
                 <Routes>
 
                     <Route path="/home" element={<Home/>}></Route>
+                    </Routes>
+                    
+                    <Routes>
+
+                    <Route path="/board" element={<Board/>}></Route>
                     </Routes>
                 <Footer/>
             </div>
