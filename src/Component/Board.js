@@ -2,6 +2,12 @@
 //작성한게시글이 남아있을 수 있도록 작성
 
 import React, {useEffect, useState} from "react";
+import Button from '@mui/material/Button';
+import { Pagination  } from "@mui/material";
+import Stack from '@mui/material/Stack';
+
+
+
 
 
 
@@ -37,22 +43,28 @@ function Board(){
         localStorage.setItem('posts', JSON.stringify(removePost))
     };
 
-
+    
+    
+   
 
 
     return (
-        <div style={{ overflowY: 'scroll', maxHeight: '250px'}}>
+        <div>
+            
             <h1>게시판</h1>
+            <div className="board">
             <div>
             <textarea
                 placeholder="게시글을 입력하세요."
+                
                 value={newPost}
                 onChange={(e) => setNewPost(e.target.value)}
             >
                 
                 </textarea>
                 <br/>
-                <button onClick={addPost}>게시글 추가</button>
+                <Button variant="contained" onClick={addPost}>게시글 추가</Button>
+                </div>
                 </div>
                     <div>
                         <h2>게시글 목록</h2>
@@ -61,10 +73,12 @@ function Board(){
                                 <li
                                 key={Index}>
                                     {post}
-                                <button onClick={() => deletePost(Index)}>삭제하기</button>
+                                <Button variant="contained" onClick={() => deletePost(Index)}>삭제하기</Button>
                                 </li>
                             ))}
                         </ul>
+                        <Pagination count={3} color="primary" />
+                        
                     </div>
                 </div>
         )

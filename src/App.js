@@ -10,11 +10,12 @@ import Board from './Component/Board';
 
 
 
+
 // 항상 대문자로 써야 됨
 function  App (){
     return(
         <Router>
-            <div>
+            <div style={{overflowY:'scroll', maxHeight:'850px'}}>
                 <Header />
                 <nav>
                     <ul>
@@ -38,12 +39,14 @@ function  App (){
 
                     <Route path="/home" element={<Home/>}></Route>
                     </Routes>
-                    
+
                     <Routes>
 
                     <Route path="/board" element={<Board/>}></Route>
                     </Routes>
-                <Footer/>
+                        <Footer/>
+    
+                
             </div>
         </Router>
     )

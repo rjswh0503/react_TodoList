@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import Button from '@mui/material/Button';
 
 function ExCallBack() {
   const [count, setCount] = useState(0);
@@ -9,7 +10,7 @@ function ExCallBack() {
   return (
     <div>
       <p>Count: {count}</p>
-      <button onClick={inClick}>증가하기</button>
+      <Button color="secondary" variant="contained" onClick={inClick}>증가하기</Button>
     </div>
   );
 }
@@ -65,7 +66,7 @@ function TodoList() {
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
         />
-        <button onClick={addTodo}>추가하기</button>
+        <Button variant="contained" onClick={addTodo}>추가하기</Button>
       </div>
       <ul>
         {todos.map((todo, index) => (
@@ -77,16 +78,16 @@ function TodoList() {
                   value={editTodo}
                   onChange={(e) => setEditTodo(e.target.value)}
                 />
-                <button onClick={saveEdit}>저장</button>
-                <button onClick={cancelEdit}>취소</button>
+                <Button variant="contained" onClick={saveEdit}>저장</Button>
+                <Button variant="contained" onClick={cancelEdit}>취소</Button>
               </div>
             ) : (
               <div>
                 {todo}
-                <button onClick={() => startEditing(index, todo)}>
+                <Button variant="contained" onClick={() => startEditing(index, todo)}>
                   수정하기
-                </button>
-                <button onClick={() => removeTodo(index)}>삭제하기</button>
+                </Button>
+                <Button variant="contained" onClick={() => removeTodo(index)}>삭제하기</Button>
               </div>
             )}
           </li>
