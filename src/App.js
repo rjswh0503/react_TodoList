@@ -7,6 +7,7 @@ import Footer from './Component/Footer';
 import About  from './Component/About';
 import Home from './Component/Home';
 import Board from './Component/Board';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 
 

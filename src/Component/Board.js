@@ -4,7 +4,10 @@
 import React, {useEffect, useState} from "react";
 import Button from '@mui/material/Button';
 import { Pagination  } from "@mui/material";
-import Stack from '@mui/material/Stack';
+import EditIcon from '@mui/icons-material/Edit';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+
 
 
 
@@ -63,7 +66,12 @@ function Board(){
                 
                 </textarea>
                 <br/>
-                <Button variant="contained" onClick={addPost}>게시글 추가</Button>
+                <Fab color="primary" aria-label="add" onClick={addPost}>
+                <AddIcon />
+                </Fab>
+                
+                
+                
                 </div>
                 </div>
                     <div>
@@ -73,7 +81,7 @@ function Board(){
                                 <li
                                 key={Index}>
                                     {post}
-                                <Button variant="contained" onClick={() => deletePost(Index)}>삭제하기</Button>
+                                <Button variant="contained" color="success" onClick={() => deletePost(Index)}>삭제하기</Button>
                                 </li>
                             ))}
                         </ul>
